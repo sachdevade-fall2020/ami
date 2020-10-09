@@ -1,0 +1,8 @@
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+
+#local vars
+vars-local.json
