@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "waiting for system setup..."
+sleep 20
+echo "Done."
+
 echo "------------------------------ start UPDATE PACKAGES ------------------------------ "
 sudo apt-get update
 echo "------------------------------ end UPDATE PACKAGES ------------------------------  "
