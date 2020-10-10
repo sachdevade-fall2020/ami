@@ -14,17 +14,25 @@ jobs:
       # checkout repository
     - name: Checkout repository
       uses: actions/checkout@v2
-    
-    - name: Check env
-      run: |
-        echo $SSH_USERNAME
-        echo $SOURCE_AMI
-        echo $AWS_REGION
       
       # validate json template
     - name: Validate template
+      env:
+        AMI_USERS: ${{ secrets.AMI_USERS }}
+        AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+        AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_AMI: ${{ secrets.SOURCE_AMI }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: packer validate ami.json
       
       # build ami using packer
     - name: Build AMI using template
+      env:
+        AMI_USERS: ${{ secrets.AMI_USERS }}
+        AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+        AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
+        SOURCE_AMI: ${{ secrets.SOURCE_AMI }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
       run: packer build ami.json
