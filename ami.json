@@ -36,8 +36,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "./setup.sh",
-            "execute_command" : "/usr/bin/cloud-init status --wait && sudo -E -S sh '{{ .Path }}'"
+            "script": "./setup.sh"
         }
     ]
 }

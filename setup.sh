@@ -2,8 +2,6 @@
 
 echo "------------------------------ start UPDATE PACKAGES ------------------------------ "
 sudo apt-get update
-sudo apt-get upgrade -y
-sudo unattended-upgrade
 echo "------------------------------ end UPDATE PACKAGES ------------------------------  "
 
 echo "------------------------------ start INSTALL PACKAGES ------------------------------  "
