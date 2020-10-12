@@ -35,8 +35,10 @@ sudo systemctl restart apache2
 echo "------------------------------ end INSTALL & CONFIGURE APACHE ------------------------------  "
 
 echo "------------------------------ start INSTALL & CONFIGURE PHP ------------------------------  "
-sudo apt-get install -y php libapache2-mod-php php-mysql
-sudo apt-get install -y php7.2-common php7.2-cli php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-mbstring php7.2-bcmath php7.2-imap php7.2-xml php7.2-zip
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:ondrej/php
+sudo apt-get install -y php7.3 libapache2-mod-php7.3
+sudo apt-get install -y php7.3-common php7.3-cli php7.3-gd php7.3-mysql php7.3-curl php7.3-intl php7.3-mbstring php7.3-bcmath php7.3-imap php7.3-xml php7.3-zip
 echo "------------------------------ end INSTALL & CONFIGURE PHP ------------------------------  "
 
 echo "------------------------------ start INSTALL COMPOSER  ------------------------------  "
