@@ -37,6 +37,17 @@
         {
             "type": "shell",
             "script": "./setup.sh"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "sudo apt install ruby -y",
+                "cd /home/ubuntu",
+                "wget https://aws-codedeploy-{{user `aws_region`}}.s3.{{user `aws_region`}}.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto",
+                "sudo service codedeploy-agent start"
+            ]
         }
     ]
 }
