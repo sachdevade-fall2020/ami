@@ -1,5 +1,6 @@
 ![Build AMI](https://github.com/sachdevade-fall2020/ami/workflows/Build%20AMI%20Workflow/badge.svg)
 
+
 # AWS AMI for CSYE 6225
 Template to build AWS AMI using [Hashicorp Packer](https://packer.io/) for CSYE 6225 course in Fall 2020
 
